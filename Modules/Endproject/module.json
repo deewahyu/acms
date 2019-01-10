@@ -1,0 +1,16 @@
+{
+    "name": "Endproject",
+    "alias": "endproject",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Endproject\\Providers\\EndprojectServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

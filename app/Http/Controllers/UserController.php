@@ -27,8 +27,10 @@ class UserController extends Controller
 
         if ($user->isAdmin()) {
             return view('pages.admin.home');
+        } else{
+            return redirect('/endproject');
         }
 
-        return view('pages.user.home');
+        //return view('pages.user.home');
     }
 }

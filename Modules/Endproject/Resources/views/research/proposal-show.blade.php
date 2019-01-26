@@ -18,6 +18,7 @@
                             <div class="card" style="width: 100%">
                                 <div class="card-body">
                                     <!-- New Task Form -->
+                                   
                                     @foreach ($student as $research_data)
                                     <div class="row">
                                             <div class="col-md-6 offset-md-0">
@@ -167,6 +168,7 @@
                                         </div>
                                     @endforeach
                                     <a class="btn btn-primary" href="{{ url ('/endproject/research/edit', $research_detail->id ) }}">Edit Proposal</a>
+                                    <a class="btn btn-danger" href="{{ url ('/endproject/research/destroy', $research_detail->id ) }}">Delete Proposal</a>
                                 </div>
                             </div>
                         </div>

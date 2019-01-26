@@ -10,6 +10,8 @@ use Auth;
 use Modules\Endproject\Entities\Research;
 use Modules\Endproject\Entities\Student;
 use Carbon\Carbon;
+use Modules\Endproject\Http\Requests\CreateResearchProposalRequest;
+
 
 class ResearchController extends Controller
 {
@@ -31,8 +33,11 @@ class ResearchController extends Controller
             if ($research->isEmpty())
                 
                 return view('endproject::research.student-nodata');
-            else
+            else{
                 return view('endproject::research.student-index', compact('research'));
+            }
+
+                
         } elseif ($user->isLecturer()) {
             return view('endproject::lecturer-index');
         } elseif ($user->isKbk()) {
@@ -60,8 +65,15 @@ class ResearchController extends Controller
      * @param  Request $request
      * @return Response
      */
-    public function store(Request $request)
+    //public function store(Request $request)
+    public function store(CreateResearchProposalRequest $request)
     {
+
+        $validated = $request->validated();
+        
+
+        
+        
 
         if ($request->research_type == "Seminar TE (PTE)"){
             $research_type = "STE";
@@ -86,11 +98,8 @@ class ResearchController extends Controller
         }
 
         $research_id =  $yearAndMonth .'-' . $research_type.$proposalCounting;
-        //echo $research_id;
 
-        
-
-        $proposal = Research::whereusername('username', '=', $username,  'and', 'research_type', '=', $request->researchType, 'and', 'status', '=', 'submitted')->count();
+        $proposal = Research::where('username', '=', $username,  'and', 'research_type', '=', $request->researchType, 'and', 'status', '=', 'created')->count();
         if ($proposal < 4){
             $proposalData = new Research;
             $proposalData->username = $username;
@@ -136,9 +145,17 @@ class ResearchController extends Controller
      * Show the form for editing the specified resource.
      * @return Response
      */
-    public function edit()
+    public function edit($id)
     {
-        return view('endproject::edit');
+        $user = Auth::user();
+
+        if ($user == null){
+            return redirect('/login');
+        }
+        $student = Student::whereusername($user->name)->get();
+
+        $research = Research::whereid($id)->get();
+        return view('endproject::research.proposal-edit', compact('research','student'));
     }
 
     /**
@@ -146,8 +163,37 @@ class ResearchController extends Controller
      * @param  Request $request
      * @return Response
      */
-    public function update(Request $request)
+    public function update(CreateResearchProposalRequest $request)
     {
+        //$validated = $request->validated();
+
+        if ($request->research_type == "Seminar TE (PTE)"){
+            $research_type = "STE";
+        } else if($request->research_type == "Tugas Akhir (TE)"){
+            $research_type = "TA";
+        }else if ($request->research_type == "Skripsi (PTE)"){
+            $research_type = "SK";
+        }
+
+        //echo $request;
+        $proposalData = Proposal::where('research_id', '=', $request->research_id);
+        
+        $proposalData->update([
+
+            'research_type' => $request->researchType,
+            'title' => $request->title,
+            'aim' => $request->aim,
+            'background' => $request->background,
+            'originality' => $request->method,
+            'schedule' => $request->schedule,
+            'method' => $request->method,
+            'proposed_first_supervisor' => $request->proposed_first_supervisor,
+            'proposed_second_supervisor' => $request->proposed_second_supervisor
+        ]);
+        
+        //return 0;
+        return redirect('/endproject/research');
+
     }
 
     /**

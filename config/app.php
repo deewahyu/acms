@@ -171,6 +171,11 @@ return [
         App\Providers\LocalEnvironmentServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
         jeremykenedy\laravelexceptionnotifier\LaravelExceptionNotifier::class,
+        Waavi\Sanitizer\Laravel\SanitizerServiceProvider::class,
+        Telegram\Bot\Laravel\TelegramServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        //Barryvdh\Snappy\ServiceProvider::class,
 
     ],
 
@@ -227,6 +232,13 @@ return [
         'Gravatar'     => Creativeorange\Gravatar\Facades\Gravatar::class,
         'Image'        => Intervention\Image\Facades\Image::class,
         'Uuid'         => Webpatser\Uuid\Uuid::class,
+        'Sanitizer' => Waavi\Sanitizer\Laravel\Facade::class,
+        'Telegram'  => Telegram\Bot\Laravel\Facades\Telegram::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+        'SnappyPDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+        
     ],
 
 ];

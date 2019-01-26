@@ -98,7 +98,6 @@
                 </div>
 
                 <div class="card-footer">
-                <b>Student Data</b> | Show of Profile Data
                 </div>
 
             </div>

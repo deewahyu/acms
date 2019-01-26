@@ -12,5 +12,7 @@ Route::group(['middleware' => 'web', 'prefix' => 'endproject', 'namespace' => 'M
     Route::get('/research/create', 'ResearchController@create');
     Route::post('/research/store', 'ResearchController@store');
     Route::get('/research/show/{id}', 'ResearchController@show');
+    Route::get('/research/edit/{id}', 'ResearchController@edit');
+    Route::post('/research/update', 'ResearchController@update');
     Route::get('/research/destroy/{id}', 'ResearchController@destroy');
 });

@@ -7,6 +7,7 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Auth;
 use Modules\Endproject\Entities\Student;
+use Modules\Endproject\Http\Requests\CreateStudentDataRequest;
 
 class StudentController extends Controller
 {
@@ -41,8 +42,10 @@ class StudentController extends Controller
      * @param  Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateStudentDataRequest $request)
     {
+        $validated = $request->validated();
+
         $user = Auth::user();
         //$student = '';
         $student = Student::whereusername($user->name)->get();

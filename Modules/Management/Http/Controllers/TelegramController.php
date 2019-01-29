@@ -89,7 +89,7 @@ class TelegramController extends Controller
         $this->username = $request['message']['from']['username'];
         $this->text = $request['message']['text'];
 
-        dd($this->chat_id.' '.$this->username.' '.$this->text);
+        //dd($this->chat_id.' '.$this->username.' '.$this->text);
  
         switch ($this->text) {
             case '/start':

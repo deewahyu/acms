@@ -53,6 +53,8 @@ class TelegramController extends Controller
 
     public function setWebHook()
     {
+
+        dd('OK set');
         $url = 'https://acms-ee.herokuapp.com/management/' .'786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg'. '/webhook';
         $response = $this->telegram->setWebhook(['url' => $url]);
     
@@ -62,6 +64,7 @@ class TelegramController extends Controller
 
     public function removeWebHook()
     {
+        dd('OK remove');
         $telegram = new Api('786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg');
 
         $response = $telegram->removeWebhook();

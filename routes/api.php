@@ -33,4 +33,6 @@ Route::post('bot/sendmessage', function() {
     return;
 });
 
+
+
 URL::forceScheme('https');

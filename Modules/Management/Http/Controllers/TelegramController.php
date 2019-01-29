@@ -17,6 +17,18 @@ class TelegramController extends Controller
     protected $username;
     protected $text;
 
+ 
+    public function __construct()
+    {
+        $this->telegram = new Api('786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg');
+    }
+ 
+    public function getMe()
+    {
+        $response = $this->telegram->getMe();
+        return $response;
+    }
+
     public function updatedActivity()
     {
         $activity = Telegram::getUpdates();

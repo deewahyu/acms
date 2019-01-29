@@ -14,6 +14,14 @@
                         <a class="nav-link" href="{{ url('/management/send-message') }}">Message Channel</a>
                         </li>
 
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/management/set-hook') }}">Set Hook</a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/management/remove-hook') }}">Remove Hook</a>
+                        </li>
+
                         
                         
                     </ul>

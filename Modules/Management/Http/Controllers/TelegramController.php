@@ -7,6 +7,8 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Telegram\Bot\Laravel\Facades\Telegram;
 
+use Telegram\Bot\Api;
+
 
 class TelegramController extends Controller
 {
@@ -51,8 +53,18 @@ class TelegramController extends Controller
 
     public function setWebHook()
     {
-        $url = 'https://acms-ee.herokuapp.com/management/' . env('TELEGRAM_BOT_TOKEN') . '/webhook';
+        $url = 'https://acms-ee.herokuapp.com/management/' .'786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg'. '/webhook';
         $response = $this->telegram->setWebhook(['url' => $url]);
+    
+        return $response == true ? redirect()->back() : dd($response);
+    }
+
+
+    public function removeWebHook()
+    {
+        $telegram = new Api('786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg');
+
+        $response = $telegram->removeWebhook();
     
         return $response == true ? redirect()->back() : dd($response);
     }

@@ -10,7 +10,8 @@ Route::group(['middleware' => 'web', 'prefix' => 'management', 'namespace' => 'M
     Route::get('/telegram-update', 'TelegramController@updatedActivity');
     Route::get('/send-message', 'TelegramController@sendMessage');
     Route::post('/store-message', 'TelegramController@storeMessage');
-    Route::post('/'. env('TELEGRAM_BOT_TOKEN') . '/webhook', 'TelegramController@handleRequest');
+    Route::post('/'. '786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg' . '/webhook', 'TelegramController@handleRequest');
     Route::post('/set-hook', 'TelegramController@setWebHook');
+    Route::post('/remove-hook', 'TelegramController@removeWebHook');
     
 });

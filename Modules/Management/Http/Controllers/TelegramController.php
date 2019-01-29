@@ -154,5 +154,3 @@ class TelegramController extends Controller
     }
 }
 
-
-}

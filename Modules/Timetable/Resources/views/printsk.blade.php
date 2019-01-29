@@ -226,7 +226,7 @@ hr {
             <tbody>
             <tr>
             <td width="70%"> </td>
-            <td width="30%">Bandung, 25 Januari 2019 <br />
+            <td width="30%">Bandung, 30 Januari 2019 <br />
                             Dekan, <br /><br /><br /> <br /><br /><br />
                             Prof. Dr. M. Syaom Barliana, M.Pd., MT <br />
                             NIP 19630204 198803 1002
@@ -396,7 +396,7 @@ hr {
             <tbody>
             <tr>
             <td width="70%"> </td>
-            <td width="30%">Bandung, 25 Januari 2019 <br />
+            <td width="30%">Bandung, 30 Januari 2019 <br />
                             Dekan, <br /><br /><br /> <br /><br /><br />
                             Prof. Dr. M. Syaom Barliana, M.Pd., MT <br />
                             NIP 19630204 198803 1002
@@ -406,17 +406,7 @@ hr {
         </table>
     </div>
 
-    <div class="kop" style="position: absolute; bottom: 0;">
-        <table width="100%">
-            <tr>
-                <td text-align="left" style="width: 50%;">
-                    &copy; deewahyu
-                </td>
-                
-            </tr>
-
-        </table>
-    </div>
+    
     <div class="page-break"></div>
 @endif
 @endforeach
@@ -737,7 +727,7 @@ PLP Processing
             <tbody>
             <tr>
             <td width="70%"> </td>
-            <td width="30%">Bandung, 25 Januari 2019 <br />
+            <td width="30%">Bandung, 30 Januari 2019 <br />
                             Dekan, <br /><br /><br /> <br /><br /><br />
                             Prof. Dr. M. Syaom Barliana, M.Pd., MT <br />
                             NIP 19630204 198803 1002
@@ -747,17 +737,7 @@ PLP Processing
         </table>
     </div>
 
-    <div class="kop" style="position: absolute; bottom: 0;">
-        <table width="100%">
-            <tr>
-                <td text-align="left" style="width: 50%;">
-                    &copy; deewahyu
-                </td>
-                
-            </tr>
-
-        </table>
-    </div>
+    
     <div class="page-break"></div>
 @endif
 @endforeach

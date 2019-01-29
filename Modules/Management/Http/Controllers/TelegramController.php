@@ -51,7 +51,7 @@ class TelegramController extends Controller
 
     public function setWebHook()
     {
-        $url = 'http://utroque.serveo.net/' . env('TELEGRAM_BOT_TOKEN') . '/webhook';
+        $url = 'https://acms-ee.herokuapp.com/management/' . env('TELEGRAM_BOT_TOKEN') . '/webhook';
         $response = $this->telegram->setWebhook(['url' => $url]);
     
         return $response == true ? redirect()->back() : dd($response);

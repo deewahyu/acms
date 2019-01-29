@@ -56,7 +56,7 @@ class TelegramController extends Controller
         $url = 'https://acms-ee.herokuapp.com/management/' .'786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg'. '/webhook';
         $response = $this->telegram->setWebhook(['url' => $url]);
     
-        return $response == true ? redirect()->back() : dd($response);
+        dd($response);
     }
 
 
@@ -66,7 +66,7 @@ class TelegramController extends Controller
 
         $response = $telegram->removeWebhook();
     
-        return $response == true ? redirect()->back() : dd($response);
+        dd($response);
     }
 
     public function handleRequest(Request $request)

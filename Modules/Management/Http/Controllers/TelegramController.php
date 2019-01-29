@@ -96,19 +96,63 @@ class TelegramController extends Controller
             case '/menu':
                 $this->showMenu();
                 break;
-            case '/getGlobal':
-                $this->showGlobal();
-                break;
-            case '/getTicker':
-                $this->getTicker();
-                break;
-            case '/getCurrencyTicker':
-                $this->getCurrencyTicker();
-                break;
+            
+            
             default:
-                $this->checkDatabase();
+                $this->getTicker();
         }
     }
+
+
+
+    public function showMenu($info = null)
+    {
+        $message = '';
+        if ($info) {
+            $message .= $info . chr(10);
+        }
+        $message .= '/menu' . chr(10);
+        $message .= '/getTicker' . chr(10);
+ 
+        $this->sendMessageX($message);
+    }
+ 
+    
+ 
+    public function getTicker()
+    {
+        
+        $this->sendMessageX('jam sekarang');
+    }
+ 
+    
+ 
+    protected function formatArray($data)
+    {
+        $formatted_data = "";
+        foreach ($data as $item => $value) {
+            $item = str_replace("_", " ", $item);
+            if ($item == 'last updated') {
+                $value = Carbon::createFromTimestampUTC($value)->diffForHumans();
+            }
+            $formatted_data .= "<b>{$item}</b>\n";
+            $formatted_data .= "\t{$value}\n";
+        }
+        return $formatted_data;
+    }
+ 
+    protected function sendMessageX($message, $parse_html = false)
+    {
+        $data = [
+            'chat_id' => $this->chat_id,
+            'text' => $message,
+        ];
+ 
+        if ($parse_html) $data['parse_mode'] = 'HTML';
+ 
+        $this->telegram->sendMessage($data);
+    }
+}
 
 
 }

@@ -126,4 +126,10 @@ Route::group(['middleware' => ['auth', 'activated', 'role:admin', 'activity', 't
     Route::get('active-users', 'AdminDetailsController@activeUsers');
 });
 
+
+
 Route::redirect('/php', '/phpinfo', 301);
+
+
+
+URL::forceScheme('https');

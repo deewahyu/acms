@@ -9,6 +9,12 @@
                         <li class="nav-item">
                         <a class="nav-link" href="{{ url('/management/listofdefenseparticipants') }}">Yudisium Data</a>
                         </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/management/send-message') }}">Message Channel</a>
+                        </li>
+
+                        
                         
                     </ul>
                     </nav>

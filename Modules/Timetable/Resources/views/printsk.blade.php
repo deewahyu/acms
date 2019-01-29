@@ -101,9 +101,9 @@ hr {
 
                 <td align="left" style="width: 80%">
 
-                  <h2><b>KEMENTERIAN RISET, TEKNOLOGI, DAN PENDIDIKAN TINGGI <br />
+                  <b>KEMENTERIAN RISET, TEKNOLOGI, DAN PENDIDIKAN TINGGI <br />
                         UNIVERSITAS PENDIDIKAN INDONESIA <br />
-                        FAKULTAS PENDIDIKAN TEKNOLOGI DAN KEJURUAN </h2><br /></b>
+                        FAKULTAS PENDIDIKAN TEKNOLOGI DAN KEJURUAN <br /></b>
                    Jl. Dr. Setiabudi No. 207 Bandung 40154 Telp. (022) 2011576 Ext. 34001 s.d 34008, 34017 Fax (022) 2011576
                 </td>
             </tr>
@@ -115,7 +115,7 @@ hr {
             <tbody>
             <tr>
                 <td align="center"><b>SURAT TUGAS</b><br />
-                No: 0346/UN40.A5/PP/2019</td>
+                No: 0346/UN40.A5/DA/2019</td>
             </tr>
             <tr><td>&nbsp;</td></tr>
             <tr>
@@ -249,9 +249,9 @@ hr {
 
                 <td align="left" style="width: 80%">
 
-                    <b><h2>KEMENTERIAN RISET, TEKNOLOGI, DAN PENDIDIKAN TINGGI <br />
+                    <b>KEMENTERIAN RISET, TEKNOLOGI, DAN PENDIDIKAN TINGGI <br />
                         UNIVERSITAS PENDIDIKAN INDONESIA <br />
-                        FAKULTAS PENDIDIKAN TEKNOLOGI DAN KEJURUAN</h2></b>
+                        FAKULTAS PENDIDIKAN TEKNOLOGI DAN KEJURUAN</b>
                         <br />
                         Jl. Dr. Setiabudi No. 207 Bandung 40154 Telp. (022) 2011576 Ext. 34001 s.d 34008, 34017 Fax (022) 2011576
                   
@@ -265,7 +265,7 @@ hr {
             <tbody>
             <tr>
                 <td align="center"><b>SURAT TUGAS<</b><br />
-                No: 0346/UN40.A5/PP/2019<br /></td>
+                No: 0346/UN40.A5/DA/2019<br /></td>
             </tr>
             <tr><td>&nbsp;</td></tr>
             <tr>
@@ -456,7 +456,7 @@ PLP Processing
             <tbody>
             <tr>
                 <td align="center"><b>SURAT TUGAS</b><br />
-                No: 0346/UN40.A5/PP/2019</td>
+                No: 0346/UN40.A5/DA/2019</td>
             </tr>
             <tr><td>&nbsp;</td></tr>
             <tr>
@@ -601,7 +601,7 @@ PLP Processing
             <tbody>
             <tr>
                 <td align="center"><b>SURAT TUGAS<</b><br />
-                No: 0346/UN40.A5/PP/2019<br /></td>
+                No: 0346/UN40.A5/DA/2019<br /></td>
             </tr>
             <tr><td>&nbsp;</td></tr>
             <tr>

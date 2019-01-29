@@ -33,10 +33,10 @@ return [
     */
     'bots'                         => [
         'mybot' => [
-            'username'            => 'TelegramBot',
-            'token'               => env('TELEGRAM_BOT_TOKEN', 'YOUR-BOT-TOKEN'),
-            'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR-CERTIFICATE-PATH'),
-            'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', 'YOUR-BOT-WEBHOOK-URL'),
+            'username'            => 'AcMS_bot',
+            'token'               => env('TELEGRAM_BOT_TOKEN', '786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg'),
+            'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', ''),
+            'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', ''),
             'commands'            => [
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
             ],

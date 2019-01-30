@@ -65,7 +65,7 @@ class TelegramController extends Controller
 
     public function setWebHook()
     {
-        $url = 'https://acms-ee.herokuapp.com/' .'786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg';
+        $url = 'http://acms-ee.herokuapp.com/management/' .'786415118:AAGVh5ixRGHkTQfx0fnV0X5yJhW_t4pCJZg';
         $response = $this->telegram->setWebhook(['url' => $url]);
         //dd($response);
         return $response == true ? redirect()->back() : dd($response);
@@ -126,21 +126,6 @@ class TelegramController extends Controller
     }
  
     
- 
-    protected function formatArray($data)
-    {
-        $formatted_data = "";
-        foreach ($data as $item => $value) {
-            $item = str_replace("_", " ", $item);
-            if ($item == 'last updated') {
-                $value = Carbon::createFromTimestampUTC($value)->diffForHumans();
-            }
-            $formatted_data .= "<b>{$item}</b>\n";
-            $formatted_data .= "\t{$value}\n";
-        }
-        return $formatted_data;
-    }
- 
     protected function sendMessageX($message, $parse_html = false)
     {
         $data = [
